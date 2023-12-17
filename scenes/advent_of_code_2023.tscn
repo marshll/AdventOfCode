@@ -1,0 +1,164 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxrbyolr8kthh"]
+
+[ext_resource type="Script" path="res://scripts/advent_of_code_2023.gd" id="1_f478p"]
+[ext_resource type="Script" path="res://scripts/day1.gd" id="1_l0wuf"]
+[ext_resource type="Script" path="res://scripts/day5.gd" id="2_083e6"]
+[ext_resource type="Script" path="res://scripts/day18.gd" id="3_6hiyn"]
+
+[node name="AdventOfCode2023" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f478p")
+
+[node name="day" type="Panel" parent="."]
+layout_mode = 2
+offset_left = 5.0
+offset_top = 40.0
+offset_right = 186.0
+offset_bottom = 84.0
+
+[node name="label" type="Label" parent="day"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 10.0
+offset_right = 48.0
+offset_bottom = 33.0
+text = "Day 1"
+
+[node name="part1" type="Button" parent="day"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 5.0
+offset_right = 115.0
+offset_bottom = 40.0
+text = "part 1"
+
+[node name="part2" type="Button" parent="day"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 5.0
+offset_right = 175.0
+offset_bottom = 40.0
+text = "part 1"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 104.0
+offset_bottom = 46.0
+text = "Result:"
+
+[node name="Result" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = 62.0
+offset_right = 140.0
+offset_bottom = 25.0
+text = "n/a"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="day1" type="Panel" parent="."]
+layout_mode = 2
+offset_left = 5.0
+offset_top = 40.0
+offset_right = 186.0
+offset_bottom = 84.0
+script = ExtResource("1_l0wuf")
+
+[node name="label" type="Label" parent="day1"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 10.0
+offset_right = 48.0
+offset_bottom = 33.0
+text = "Day 1"
+
+[node name="day1_part1" type="Button" parent="day1"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 5.0
+offset_right = 115.0
+offset_bottom = 40.0
+text = "part 1"
+
+[node name="day1_part2" type="Button" parent="day1"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 5.0
+offset_right = 175.0
+offset_bottom = 40.0
+text = "part 1"
+
+[node name="day5" type="Panel" parent="."]
+layout_mode = 2
+offset_left = 5.0
+offset_top = 40.0
+offset_right = 186.0
+offset_bottom = 84.0
+script = ExtResource("2_083e6")
+
+[node name="label" type="Label" parent="day5"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 10.0
+offset_right = 48.0
+offset_bottom = 33.0
+text = "Day 1"
+
+[node name="part1" type="Button" parent="day5"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 5.0
+offset_right = 115.0
+offset_bottom = 40.0
+text = "part 1"
+
+[node name="part2" type="Button" parent="day5"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 5.0
+offset_right = 175.0
+offset_bottom = 40.0
+text = "part 2"
+
+[node name="day18" type="Panel" parent="."]
+layout_mode = 2
+offset_left = 198.0
+offset_top = 40.0
+offset_right = 379.0
+offset_bottom = 84.0
+script = ExtResource("3_6hiyn")
+
+[node name="label" type="Label" parent="day18"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 10.0
+offset_right = 48.0
+offset_bottom = 33.0
+text = "Day 18"
+
+[node name="part1" type="Button" parent="day18"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 5.0
+offset_right = 115.0
+offset_bottom = 40.0
+text = "part 1"
+
+[node name="part2" type="Button" parent="day18"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 5.0
+offset_right = 175.0
+offset_bottom = 40.0
+text = "part 2"
+
+[connection signal="pressed" from="day1/day1_part1" to="day1" method="_on_day_1_part_1_pressed"]
+[connection signal="pressed" from="day1/day1_part2" to="day1" method="_on_day_1_part_2_pressed"]
+[connection signal="pressed" from="day18/part1" to="day18" method="_on_part_1_pressed"]
+[connection signal="pressed" from="day18/part2" to="day18" method="_on_part_2_pressed"]
